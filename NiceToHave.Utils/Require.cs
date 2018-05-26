@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NiceToHave.Utils.Extension;
+using System;
 
 namespace NiceToHave.Utils
 {
@@ -37,6 +38,10 @@ namespace NiceToHave.Utils
         
         public static void IsComplex(Type t, string message)
         {
+            if(t.IsSimple())
+            {
+                throw new ArgumentException(message);
+            }
 
         }
     }
