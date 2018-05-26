@@ -1,10 +1,12 @@
-﻿using System;
+﻿using NiceToHave.Desicion.States;
+using NiceToHave.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NiceToHave.Desicion.States
+namespace NiceToHave.Desicion
 {
     public class Statemachine<TType>
     {
@@ -20,6 +22,8 @@ namespace NiceToHave.Desicion.States
 
         public Statemachine()
         {
+            Require.IsComplex(typeof(TType), "Die Statemachine ist nur für komplexe Referenztypen ausgelegt");
+
             InitialiState = new State<TType>(INITIAL_STATE_NAME, this);
             FinalState = new State<TType>(FINAL_STATE_NAME, this)
             {

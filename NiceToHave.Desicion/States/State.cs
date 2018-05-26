@@ -27,7 +27,7 @@ namespace NiceToHave.Desicion.States
 
         public State<TType> TransitToState(string targetIdentifier, Predicate<TType> condition, Action<TType> transformation)
         {
-            _transitions.Add(new Transition<TType>(_stateMachine.GetState(targetIdentifier), condition, transformation));
+            _transitions.Add(new Transition<TType>(_stateMachine.GetOrCreateState(targetIdentifier), condition, transformation));
             return this;
         }
 
@@ -56,7 +56,7 @@ namespace NiceToHave.Desicion.States
             var transition = _transitions.FirstOrDefault(t => t.Condition(element));
             if(transition == null)
             {
-                throw new InvalidOperationException($"Es wurde keine Bedingung für Status {Identifier} die einen Übergang ermöglicht.");
+                throw new InvalidOperationException($"Es wurde keine Bedingung für Status {Identifier} gefunden, die einen Übergang ermöglicht.");
             }
 
             transition.Transformation(element);

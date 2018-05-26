@@ -43,7 +43,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="States\Transition.cs" />
     <Compile Include="States\State.cs" />
-    <Compile Include="States\Statemachine.cs" />
+    <Compile Include="Statemachine.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NiceToHave.Utils\Utils.csproj">
+      <Project>{89e2b4b6-520c-48e0-b4ab-7253204f76e1}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

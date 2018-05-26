@@ -28,6 +28,16 @@ namespace NiceToHave.Utils
             {
                 throw new ArgumentException(message);
             }
-        }  
+        }
+        
+        public static void IsComplex(Type t)
+        {
+            IsComplex(t, "Das Element muss ein komplexter Type sein.");
+        }
+        
+        public static void IsComplex(Type t, string message)
+        {
+
+        }
     }
 }
