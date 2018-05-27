@@ -8,7 +8,7 @@ namespace NiceToHave.Test.UtilsTest.Extension
     public class TypeExtensionsTests
     {
         [TestMethod]
-        public void IsSimple<ShouldWork()
+        public void IsSimpleShouldWork()
         {
             Assert.IsFalse(typeof(TypeExtensionsTests).IsSimple());
             Assert.IsTrue(typeof(string).IsSimple());
