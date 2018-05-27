@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NiceToHave.Utils.Extension
 {
@@ -20,6 +16,11 @@ namespace NiceToHave.Utils.Extension
               || typeInfo.IsEnum
               || type.Equals(typeof(string))
               || type.Equals(typeof(decimal));
+        }
+
+        public static bool IsComplex(this Type type)
+        {
+            return !IsSimple(type);
         }
     }
 }

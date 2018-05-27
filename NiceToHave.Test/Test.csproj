@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="DesicionTest\StatemachineTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UtilsTest\Extension\EnumerableExtensionsTests.cs" />
     <Compile Include="UtilsTest\Extension\TypeExtensionsTests.cs" />
     <Compile Include="UtilsTest\RequireTests.cs" />
   </ItemGroup>

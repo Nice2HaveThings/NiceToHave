@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "NiceToHave.Utils\U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "NiceToHave.Test\Test.csproj", "{4E278D91-75ED-46F9-BFA1-34C1A51B2B11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threading", "NiceToHave.Threading\Threading.csproj", "{74C32FD1-F35A-4845-9ED3-32ECC47F13C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4E278D91-75ED-46F9-BFA1-34C1A51B2B11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E278D91-75ED-46F9-BFA1-34C1A51B2B11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E278D91-75ED-46F9-BFA1-34C1A51B2B11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74C32FD1-F35A-4845-9ED3-32ECC47F13C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74C32FD1-F35A-4845-9ED3-32ECC47F13C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74C32FD1-F35A-4845-9ED3-32ECC47F13C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74C32FD1-F35A-4845-9ED3-32ECC47F13C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
