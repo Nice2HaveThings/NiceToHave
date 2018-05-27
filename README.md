@@ -6,6 +6,7 @@ Content:
 	* Statemachine: Simple Implementation of a State-Machine.
 * Threading
 	* ConcurrentList: Threadsafe Implementation of IList
+	* ThreadsafePromise: Threadsafe Implementation of the Promise-Pattern
 * Utils
 	* Require: Shortform for paramterchecks
 * Utils.Extension

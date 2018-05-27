@@ -42,7 +42,14 @@ namespace NiceToHave.Utils
             {
                 throw new ArgumentException(message);
             }
+        }
 
+        public static void Condition(Func<bool> condition, string message)
+        {
+            if(!condition())
+            {
+                throw new InvalidOperationException(message);
+            }
         }
     }
 }

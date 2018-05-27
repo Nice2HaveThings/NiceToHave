@@ -22,7 +22,7 @@ namespace NiceToHave.Desicion
 
         public Statemachine()
         {
-            Require.IsComplex(typeof(TType), "Die Statemachine ist nur für komplexe Referenztypen ausgelegt");
+            Require.IsComplex(typeof(TType), "Statemachine is only provides for complex referenztypes.");
 
             InitialiState = new State<TType>(INITIAL_STATE_NAME, this);
             FinalState = new State<TType>(FINAL_STATE_NAME, this)
