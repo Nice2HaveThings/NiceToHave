@@ -9,10 +9,3 @@ Content:
 	* ThreadsafePromise: Threadsafe Implementation of the Promise-Pattern
 * Utils
 	* Require: Shortform for paramterchecks
-* Utils.Extension
-	* EnumerationExtensions:
-		* Second
-		* SecondOrDefault
-	* TypeExtensions:
-		* IsComplex
-		* IsSimple
