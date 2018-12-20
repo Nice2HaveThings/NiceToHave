@@ -1,4 +1,4 @@
-﻿using NiceToHave.Utils.Extension;
+﻿using PowerExtensions.Reflection;
 using System;
 
 namespace NiceToHave.Utils
