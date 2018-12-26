@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PowerExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PowerExtensions.0.0.2\lib\net471\PowerExtensions.dll</HintPath>
+      <HintPath>..\packages\PowerExtensions.1.0.0\lib\net471\PowerExtensions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,7 +54,6 @@
     <Compile Include="Threading\ThreadsafePromise.PromiseState.cs" />
     <Compile Include="Utils\Require.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
