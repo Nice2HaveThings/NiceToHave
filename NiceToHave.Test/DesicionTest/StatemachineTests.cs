@@ -1,13 +1,14 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using FluentAssertions;
+using System;
 using NiceToHave.Desicion;
+using NUnit.Framework;
 
 namespace NiceToHave.Test.DesicionTest
 {
-    [TestClass]
+    [TestFixture]
     public class StatemachineTests
     {
-        [TestMethod]
+        [Test]
         public void StatemachineShouldWork()
         {
             Statemachine<TestClass> machine = new Statemachine<TestClass>();
@@ -19,7 +20,7 @@ namespace NiceToHave.Test.DesicionTest
             TestClass test = new TestClass();
             machine.Execute(test);
 
-            Assert.AreEqual(test.FuBar, "2");
+            test.FuBar.Should().Be("2");
         }
 
         private class TestClass

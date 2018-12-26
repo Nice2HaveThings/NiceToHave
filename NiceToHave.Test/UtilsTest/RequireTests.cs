@@ -1,13 +1,14 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using FluentAssertions;
+using NUnit.Framework;
+using System;
 using NiceToHave.Utils;
 
 namespace NiceToHave.Test.Utils
 {
-    [TestClass]
+    [TestFixture]
     public class RequireTests
     {
-        [TestMethod]
+        [Test]
         public void NotNullShouldNotThrowIfNotNull()
         {
             object[] validInputs =
@@ -25,13 +26,15 @@ namespace NiceToHave.Test.Utils
             }
         }
 
-        [TestMethod]
+        [Test]
         public void NotNullShouldThrowIfNull()
         {
-            Assert.ThrowsException<ArgumentException>(() => Require.NotNull(null));
+            Action fail = () => Require.NotNull(null);
+
+            fail.Should().Throw<ArgumentException>();
         }
 
-        [TestMethod]
+        [Test]
         public void NotEmptyShouldNotThrowOnValidInput()
         {
             string[] validInputs =
@@ -45,7 +48,7 @@ namespace NiceToHave.Test.Utils
             }
         }
 
-        [TestMethod]
+        [Test]
         public void NotEmptyShouldThrowOnInvalidInput()
         {
             string[] invalidInputs =
@@ -57,7 +60,9 @@ namespace NiceToHave.Test.Utils
 
             foreach(string input in invalidInputs)
             {
-                Assert.ThrowsException<ArgumentException>(() => Require.NotEmpty(input));
+                Action fail = () => Require.NotEmpty(input);
+
+                fail.Should().Throw<ArgumentException>();
             }
         }
     }

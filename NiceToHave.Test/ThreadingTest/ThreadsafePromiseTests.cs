@@ -1,29 +1,30 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using FluentAssertions;
+using NUnit.Framework;
+using System;
 using NiceToHave.Threading;
 
 namespace NiceToHave.Test.ThreadingTest
 {
-    [TestClass]
+    [TestFixture]
     public class ThreadsafePromiseTests
     {
-        [TestMethod]
+        [Test]
         public void ShouldWork()
         {
             int test = 0;
             ThreadsafePromise<int> promise = new ThreadsafePromise<int>();
 
             promise.Done(i => test = test + i, ex => Assert.Fail());
-            Assert.AreEqual(test, 0);
+            test.Should().Be(0);
             promise.Done(i => test = test + i, ex => Assert.Fail());
-            Assert.AreEqual(test, 0);
+            test.Should().Be(0);
 
             promise.Resolve(1);
 
-            Assert.AreEqual(test, 2);
+            test.Should().Be(2);
 
             promise.Done(i => test = test + i, ex => Assert.Fail());
-            Assert.AreEqual(test, 3);
+            test.Should().Be(3);
         }
     }
 }
