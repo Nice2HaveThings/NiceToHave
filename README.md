@@ -1,4 +1,7 @@
 # NiceToHave
+
+[![NuGet version](https://img.shields.io/badge/nuget-v0.0.7-brightgreen.svg)](https://www.nuget.org/packages/NiceToHave/)
+
 Some helpful little Classes you don't need but which are really nice to have.
 
 Content:

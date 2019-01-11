@@ -132,7 +132,14 @@ namespace NiceToHave.Threading
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return GetEnumerator();
+            TType[] arr;
+
+            lock(_syncRoot)
+            {
+                arr = _internalList.ToArray();
+            }
+
+            return arr.GetEnumerator();
         }
     }
 }
