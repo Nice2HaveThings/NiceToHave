@@ -1,10 +1,9 @@
 ﻿using FluentAssertions;
-using System;
 using NiceToHave.Reflection;
 using NUnit.Framework;
 using System.Linq;
 
-namespace NiceToHave.Test.ReflectionTest
+namespace NiceToHave.Test.Reflection
 {
     [TestFixture]
     public class ReflectionCacheTests

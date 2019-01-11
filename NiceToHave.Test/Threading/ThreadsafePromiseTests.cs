@@ -1,9 +1,8 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
-using System;
 using NiceToHave.Threading;
 
-namespace NiceToHave.Test.ThreadingTest
+namespace NiceToHave.Test.Threading
 {
     [TestFixture]
     public class ThreadsafePromiseTests

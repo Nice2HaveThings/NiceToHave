@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Collection\NonRepeatableEnumerable.cs" />
     <Compile Include="Desicion\Statemachine.cs" />
     <Compile Include="Desicion\States\State.cs" />
     <Compile Include="Desicion\States\Transition.cs" />

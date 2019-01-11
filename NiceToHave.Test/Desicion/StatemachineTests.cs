@@ -1,9 +1,8 @@
 ﻿using FluentAssertions;
-using System;
 using NiceToHave.Desicion;
 using NUnit.Framework;
 
-namespace NiceToHave.Test.DesicionTest
+namespace NiceToHave.Test.Desicion
 {
     [TestFixture]
     public class StatemachineTests
